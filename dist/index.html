@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Big General's Pizza - Home</title>
+  <link rel="stylesheet" href="./css/main.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header__outer-container">
+      <div class="header__inner-container">
+        <a href="index.html" class="header__title-container">
+          <img src="./images/logo.png" alt="Big General's Pizza Logo" />
+        </a>
+        <h2 class="header__phone">604-555-8155</h2>
+      </div>
+      <div class="header__inner-container">
+        <a href="#" class="header__cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="header__hamburger-container">
+          <div class="header__hamburger"></div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Nav -->
+  <nav class="nav--main">
+    <a href="#" class="nav__close-container">
+      <div class="nav__close"></div>
+    </a>
+    <ul class="nav__main">
+      <li><a href="index.html" class="nav__main-link">Home</a></li>
+      <li><a href="menu.html" class="nav__main-link">Our Menu</a></li>
+      <li><a href="location.html" class="nav__main-link">Our Location</a></li>
+    </ul>
+    <ul class="nav__social">
+      <li>
+        <a href="https://www.facebook.com" target="_blank" class="nav__social-link"><i class="fab fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com" target="_blank" class="nav__social-link"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com" target="_blank" class="nav__social-link"><i
+            class="fab fa-instagram"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Menu - Hero -->
+    <section class="hero">
+      <h1 class="hero__message">Welcome to the General's</h1>
+      <a href="menu.html" class="hero__button">Order Now!</a>
+    </section>
+    <!-- Small Buttons -->
+    <section class="small-button-container">
+      <a href="menu.html" class="small-button small-button-green">See Our Menu</a>
+      <a href="#reservation" class="small-button small-button-yellow">Make a Reservation</a>
+    </section>
+    <!-- Image Buttons -->
+    <section class="img-button-container">
+      <div class="img-button img-button-pizza">
+        <a href="menu.html#pizza" class="img-button__title">
+          <h2>Pizza</h2>
+        </a>
+      </div>
+      <div class="img-button img-button-wings">
+        <a href="menu.html#wings" class="img-button__title">
+          <h2>Wings</h2>
+        </a>
+      </div>
+      <div class="img-button img-button-salad">
+        <a href="menu.html#salad" class="img-button__title">
+          <h2>Salads</h2>
+        </a>
+      </div>
+    </section>
+    <!-- Reservation -->
+    <section class="reso" id="reservation">
+      <!-- Circle Header -->
+      <div class="circle__container">
+        <div class="circle__circle circle__circle--red">
+          <h2 class="circle__header circle__header--white">
+            Make a Reservation
+          </h2>
+        </div>
+      </div>
+      <div class="reso__container">
+        <!-- Reso Form -->
+        <form action="reservation-confirmation.html" class="reso__form" method="POST">
+          <div class="reso__text-container">
+            <label for="first-name">First Name:</label>
+            <input type="text" name="first-name" id="first-name" required class="reso__input-text" />
+          </div>
+          <div class="reso__text-container">
+            <label for="last-name">Last Name:</label>
+            <input type="text" name="last-name" id="last-name" required class="reso__input-text" />
+          </div>
+          <div class="reso__text-container">
+            <label for="email">Your Email Address:</label>
+            <input type="email" name="email" id="email" required class="reso__input-text" />
+          </div>
+          <div class="reso__text-container">
+            <label for="phone">Your Phone Number:</label>
+            <input type="text" name="phone" id="phone" required class="reso__input-text" />
+          </div>
+          <div class="reso__third-container">
+            <label for="guests">Number in Party:</label>
+            <select name="guests" id="guests">
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04" selected="selected">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="reso__third-container">
+            <label for="date">Date:</label>
+            <input type="date" id="date" min="2021-04-01" value="2021-04-08" required class="reso__form-date" />
+          </div>
+          <div class="reso__third-container">
+            <label for="time">Time:</label>
+            <select name="time" id="time">
+              <option value="5:00 PM">5:00 PM</option>
+              <option value="5:15 PM">5:15 PM</option>
+              <option value="5:30 PM">5:30 PM</option>
+              <option value="5:45 PM">5:45 PM</option>
+
+              <option value="6:00 PM">6:00 PM</option>
+              <option value="6:15 PM">6:15 PM</option>
+              <option value="6:30 PM" selected="selected">6:30 PM</option>
+              <option value="6:45 PM">6:45 PM</option>
+
+              <option value="7:00 PM">7:00 PM</option>
+              <option value="7:15 PM">7:15 PM</option>
+              <option value="7:30 PM">7:30 PM</option>
+              <option value="7:45 PM">7:45 PM</option>
+
+              <option value="8:00 PM">8:00 PM</option>
+              <option value="8:15 PM">8:15 PM</option>
+              <option value="8:30 PM">8:30 PM</option>
+              <option value="8:45 PM">8:45 PM</option>
+
+              <option value="9:00 PM">9:00 PM</option>
+              <option value="9:15 PM">9:15 PM</option>
+              <option value="9:30 PM">9:30 PM</option>
+              <option value="9:45 PM">9:45 PM</option>
+
+              <option value="10:00 PM">10:00 PM</option>
+              <option value="10:15 PM">10:15 PM</option>
+              <option value="10:30 PM">10:30 PM</option>
+              <option value="10:45 PM">10:45 PM</option>
+
+              <option value="11:00 PM">11:00 PM</option>
+            </select>
+          </div>
+
+          <input type="submit" class="form__submit" />
+        </form>
+      </div>
+    </section>
+  </main>
+  <!-- Footers -->
+  <footer class="footer__main">
+    <div class="footer__container">
+      <table class="footer__hours">
+        <tr>
+          <td class="footer__hours__header">Day</td>
+          <td class="footer__hours__header">Hours</td>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>11:00am - 12:00am</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>11:00am - 12:00am</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>11:00am - 12:00am</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>11:00am - 2:00am</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>11:00am - 2:00am</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td>11:00am - 2:00am</td>
+        </tr>
+        <tr>
+          <td>Sunday & Holidays</td>
+          <td>12:00pm - 11:00pm</td>
+        </tr>
+      </table>
+
+      <ul class="footer__list">
+        <li><a href="#">Order: 604-555-8155</a></li>
+        <li>
+          <a href="#" class="footer__list__margin">Email: info@biggenerals.com</a>
+        </li>
+
+        <li><a href="#">Nutrition</a></li>
+        <li><a href="#">Catering</a></li>
+        <li><a href="location.html">Contact Us</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </div>
+  </footer>
+  <footer class="copyright">
+    <p>&copy; 2021 Aaron Holt - Site Designed By Aaron Holt</p>
+  </footer>
+  <!-- Covers Body when Nav is Open -->
+  <div class="cover-body"></div>
+  <!-- Scripts -->
+  <script src="./scripts/nav.js"></script>
+</body>
+
+</html>

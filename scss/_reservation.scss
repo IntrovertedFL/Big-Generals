@@ -1,0 +1,64 @@
+/*** Reservation Confirmation Page ***/
+
+.conf {
+	@include container;
+	text-align: center;
+	color: $dark;
+}
+
+.conf__header {
+	color: $red;
+	font-size: 4em;
+	margin: 200px 0 40px;
+
+	@media screen and (max-width: $break-md) {
+		font-size: 2em;
+		margin: 200px 15px 40px;
+	}
+}
+
+.conf__subheader {
+	font-size: 2.2em;
+	margin: 0 auto 100px;
+
+	@media screen and (max-width: $break-md) {
+		font-size: 1.5em;
+		margin: 0 15px 40px;
+	}
+}
+
+.conf__par {
+	font-size: 1.3em;
+	margin: 0 0 240px;
+
+	@media screen and (max-width: $break-md) {
+		font-size: 1em;
+		margin: 0 15px 240px;
+	}
+}
+
+/* Back to Home Button*/
+.conf__back {
+	font-size: 2em;
+	color: $white;
+	background: $red;
+	text-decoration: none;
+	display: inline-block;
+	padding: 20px 200px;
+	border-radius: 6px;
+	@include hover-transition;
+	margin-bottom: 100px;
+
+	@media screen and (max-width: $break-md) {
+		font-size: 1em;
+		width: 95%;
+		padding: 20px 0;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $dark;
+		color: $white;
+	}
+}

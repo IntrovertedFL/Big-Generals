@@ -1,0 +1,335 @@
+/*** Header ***/
+
+header {
+	width: 100%;
+	background: $dark;
+	height: 60px;
+	box-shadow: 0 0 2px 2px rgba($dark, 0.3);
+	z-index: 2;
+	position: fixed;
+	top: 0;
+
+	// @media screen and (max-width: $break-lg) {
+	// 	background: orange;
+	// }
+
+	// @media screen and (max-width: $break-sm) {
+	// 	background: white;
+	// }
+}
+
+.header__outer-container {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	@include container;
+}
+
+.header__inner-container {
+	display: flex;
+}
+
+/* Header Title Banner */
+.header__title-container {
+	display: block;
+	width: 90px;
+	height: 120px;
+	background-color: $red;
+	clip-path: polygon(0% 100%, 50% 80%, 100% 100%, 100% 0%, 0% 0%);
+	z-index: 3;
+	@include hover-transition;
+	margin: 0 30px;
+
+	& img {
+		width: 80%;
+		margin: 12px 10%;
+	}
+
+	@media screen and (max-width: $break-md) {
+		width: 70px;
+		height: 100px;
+		margin: 0 15px;
+	}
+
+	@media screen and (max-width: $break-sm) {
+		width: 50px;
+		height: 75px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $yellow;
+	}
+}
+
+.header__phone {
+	line-height: 60px;
+	color: $yellow;
+	font-size: 1.6em;
+	font-weight: 700;
+	overflow: hidden;
+
+	@media screen and (max-width: $break-md) {
+		font-size: 1.2em;
+	}
+
+	@media screen and (max-width: $break-sm) {
+		display: none;
+	}
+}
+
+.header__cart {
+	color: $white;
+	line-height: 60px;
+	text-align: center;
+	padding: 0 30px;
+	text-decoration: none;
+	color: $white;
+	display: block;
+	height: 100%;
+	font-size: 1.4em;
+	@include hover-transition;
+
+	@media screen and (max-width: $break-md) {
+		font-size: 1.1em;
+		padding: 0 15px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: rgba(0, 0, 0, 0.3);
+		color: $red;
+	}
+}
+
+/* Hamburger */
+
+/* Hover effects for hamburger */
+.header__hamburger-container {
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+
+	&:hover .header__hamburger,
+	&:focus .header__hamburger,
+	&:active .header__hamburger,
+	&:hover .header__hamburger:before,
+	&:focus .header__hamburger:before,
+	&:active .header__hamburger:before,
+	&:hover .header__hamburger:after,
+	&:focus .header__hamburger:after,
+	&:active .header__hamburger:after {
+		background-color: $red;
+	}
+}
+
+/* Sets size and position of hamburger lines*/
+.header__hamburger {
+	height: 3px;
+	width: 26px;
+	border-radius: 5px;
+	background-color: $white;
+	position: relative;
+	top: 27px;
+	margin: 0 30px;
+
+	@media screen and (max-width: $break-md) {
+		margin: 0 15px;
+	}
+
+	&:before,
+	&:after {
+		content: "";
+		height: 3px;
+		width: 26px;
+		border-radius: 5px;
+		background-color: $white;
+		position: absolute;
+	}
+	&:before {
+		bottom: 9px;
+
+		@media screen and (max-width: $break-md) {
+			bottom: 7px;
+		}
+	}
+
+	&::after {
+		top: 9px;
+
+		@media screen and (max-width: $break-md) {
+			top: 7px;
+		}
+	}
+}
+
+/*** Nav ***/
+.nav--main {
+	position: fixed;
+	right: 0;
+	top: 0;
+	background-color: $grey;
+	height: 100vh;
+	width: 30%;
+	max-width: 600px;
+	min-width: 300px;
+	z-index: 20;
+	border-left: 10px solid $dark;
+	transform: translate(110%, 0);
+	transition: transform 200ms ease-in-out;
+
+	& .nav__close-container {
+		width: 100%;
+		height: 60px;
+		position: relative;
+		display: block;
+		@include hover-transition;
+		border-bottom: 1px solid rgba($dark, 0.1);
+
+		& .nav__close {
+			height: 4px;
+			width: 36px;
+			transform: rotate(45deg);
+			border-radius: 8px;
+			background-color: $dark;
+			position: absolute;
+			top: 28px;
+			right: 15px;
+			@include hover-transition;
+
+			@media screen and (max-width: $break-md) {
+				height: 3px;
+				width: 30px;
+			}
+
+			&:before {
+				content: "";
+				height: 4px;
+				width: 36px;
+				transform: rotate(-90deg);
+				border-radius: 8px;
+				background-color: $dark;
+				position: absolute;
+				@include hover-transition;
+
+				@media screen and (max-width: $break-md) {
+					height: 3px;
+					width: 30px;
+				}
+			}
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		&:hover .nav__close,
+		&:focus .nav__close,
+		&:active .nav__close,
+		&:hover .nav__close:before,
+		&:focus .nav__close:before,
+		&:active .nav__close:before {
+			background-color: $red;
+		}
+	}
+
+	& ul {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	& .nav__main {
+		flex-direction: column;
+	}
+
+	& .nav__main-link {
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 1.4em;
+		padding: 1.8em;
+		border-bottom: 1px solid rgba($dark, 0.1);
+		color: $dark;
+		text-decoration: none;
+		@include hover-transition;
+
+		@media screen and (max-width: $break-md) {
+			font-size: 1.1em;
+			padding: 2.4em;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: rgba(0, 0, 0, 0.3);
+			color: $red;
+		}
+	}
+
+	& .nav__social {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		border-top: 1px solid rgba($dark, 0.1);
+		justify-content: space-between;
+
+		& li {
+			width: 100%;
+			text-align: center;
+			@include hover-transition;
+
+			& .nav__social-link {
+				display: block;
+				width: 100%;
+				height: 100%;
+				font-size: 2em;
+				padding: 1em 0;
+				color: $dark;
+				@include hover-transition;
+
+				@media screen and (max-width: $break-md) {
+					font-size: 1.4em;
+				}
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: rgba(0, 0, 0, 0.3);
+					color: $red;
+				}
+			}
+		}
+	}
+}
+
+/* Covers main content when nav is open */
+.cover-body {
+	z-index: 4;
+	background-color: rgba($dark, 0.6);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 300ms ease-in-out;
+}
+
+/* Shows cover */
+.show-cover {
+	opacity: 1;
+	pointer-events: all;
+}
+
+/* Moves Nav onto screen */
+.show-nav {
+	transform: translate(0, 0);
+}

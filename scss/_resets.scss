@@ -1,0 +1,47 @@
+/**** Resets ****/
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/*** Global ****/
+
+main {
+	/* Nudges content down, needed for fixed header */
+	margin-top: 60px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	margin: 0;
+	font-family: $font-body;
+}
+
+h1 {
+	font-family: $font-heading;
+}
+
+h2,
+h3 {
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+p {
+	line-height: 1.4;
+}

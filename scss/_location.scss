@@ -1,0 +1,234 @@
+/*** Location Page ***/
+
+/* Hero - Location */
+.hero-location {
+	@include container;
+	/* Image Credit: Pablo Lancaster Jones on Unsplash.com */
+	background-image: url(../images/location-hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	height: 250px;
+	margin: 90px auto 30px;
+	border: 10px solid $grey;
+	overflow: hidden;
+
+	@media screen and (max-width: $break-lg) {
+		border: none;
+		margin: 0 auto;
+		height: 220px;
+	}
+
+	@media screen and (max-width: $break-sm) {
+		height: 150px;
+	}
+	@media screen and (max-width: $break-xs) {
+		height: 110px;
+	}
+
+	&__message {
+		margin: 1.2em auto 0;
+		color: $white;
+		text-shadow: 2px 2px 8px rgba(black, 0.8);
+		font-size: 4em;
+		text-align: center;
+
+		@media screen and (max-width: $break-sm) {
+			font-size: 2.5em;
+		}
+		@media screen and (max-width: $break-xs) {
+			font-size: 1.8em;
+		}
+	}
+}
+
+/* Map */
+.map {
+	@include container;
+
+	&__header {
+		font-size: 2.4em;
+		color: $dark;
+		margin-top: 40px;
+		text-align: center;
+
+		@media screen and (max-width: $break-md) {
+			font-size: 1.8em;
+			margin-top: 25px;
+		}
+	}
+
+	&__img {
+		border: 10px $grey solid;
+		margin-bottom: 30px;
+
+		@media screen and (max-width: $break-lg) {
+			border: none;
+		}
+
+		@media screen and (max-width: $break-md) {
+			height: 400px;
+			object-fit: cover;
+		}
+	}
+}
+
+/* Contact & Location info Section */
+.contact {
+	background-color: $grey;
+	color: $dark;
+
+	&__container {
+		@include container;
+		padding: 90px 0;
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: $break-md) {
+			padding: 40px 0;
+		}
+
+		@media screen and (max-width: $break-sm) {
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: 40px 0 0;
+		}
+	}
+
+	&__flex-container {
+		flex: 1;
+		margin-right: 12%;
+
+		@media screen and (max-width: $break-lg) {
+			margin-right: 0;
+		}
+
+		@media screen and (max-width: $break-sm) {
+			margin-bottom: 40px;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__icon-container {
+		border-radius: 50%;
+		width: 130px;
+		height: 130px;
+		margin: 0 auto 30px;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+
+		@media screen and (max-width: $break-md) {
+			width: 80px;
+			height: 80px;
+		}
+
+		@media screen and (max-width: $break-sm) {
+			margin-bottom: 10px;
+		}
+
+		&--red {
+			background-color: $red;
+		}
+
+		&--green {
+			background-color: $green;
+		}
+
+		&--blue {
+			background-color: $blue;
+		}
+	}
+
+	&__icon {
+		color: $grey;
+		font-size: 2.7em;
+
+		@media screen and (max-width: $break-md) {
+			font-size: 1.5em;
+		}
+	}
+
+	&__subheader {
+		font-size: 1.6em;
+		margin-bottom: 15px;
+		text-align: center;
+
+		@media screen and (max-width: $break-md) {
+			font-size: 1.2em;
+			margin-bottom: 6px;
+		}
+	}
+
+	&__content {
+		margin-bottom: 4px;
+		font-size: 1.1em;
+		text-align: center;
+
+		@media screen and (max-width: $break-md) {
+			font-size: 0.9em;
+		}
+	}
+}
+
+/* Hours Table */
+.hours {
+	@include container;
+	color: $dark;
+
+	&__header {
+		font-size: 2.4em;
+		margin-top: 40px;
+		text-align: center;
+
+		@media screen and (max-width: $break-md) {
+			font-size: 1.8em;
+			margin-top: 25px;
+		}
+	}
+
+	& table {
+		width: 60%;
+		border: 5px $grey solid;
+		margin: 0 auto 60px;
+
+		@media screen and (max-width: $break-md) {
+			width: 95%;
+		}
+
+		& td {
+			width: 50%;
+			display: inline-block;
+			padding: 0.6em 0;
+			font-size: 1.2em;
+			margin-bottom: 8px;
+
+			@media screen and (max-width: $break-md) {
+				font-size: 1em;
+			}
+			@media screen and (max-width: $break-xs) {
+				font-size: 0.9em;
+			}
+		}
+
+		& tr:first-child {
+			font-weight: 700;
+			font-size: 1.3em;
+
+			@media screen and (max-width: $break-md) {
+				font-size: 1.1m;
+			}
+		}
+		& td:first-child {
+			text-align: left;
+			padding-left: 30px;
+		}
+		& td:last-child {
+			text-align: right;
+			padding-right: 30px;
+		}
+	}
+}

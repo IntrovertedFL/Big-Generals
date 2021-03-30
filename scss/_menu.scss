@@ -1,0 +1,341 @@
+/*** Menu Page ***/
+
+/* Hero - Menu */
+.hero-menu {
+	@include container;
+	/* Image Credit: Ivan Torres on Unsplash.com */
+	background-image: url(../images/menu-hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	height: 250px;
+	margin: 90px auto 30px;
+	border: 10px solid $grey;
+	overflow: hidden;
+
+	@media screen and (max-width: $break-lg) {
+		border: none;
+		margin: 0 auto;
+		height: 220px;
+	}
+
+	@media screen and (max-width: $break-sm) {
+		height: 150px;
+	}
+	@media screen and (max-width: $break-xs) {
+		height: 110px;
+	}
+
+	&__message {
+		margin: 1.2em auto 0;
+		color: $white;
+		text-shadow: 2px 2px 8px rgba(black, 0.8);
+		font-size: 4em;
+		text-align: center;
+
+		@media screen and (max-width: $break-sm) {
+			font-size: 2.5em;
+		}
+		@media screen and (max-width: $break-xs) {
+			font-size: 1.8em;
+		}
+	}
+}
+
+/* Menu Small Button Links */
+.menu-links {
+	margin-bottom: 30px;
+
+	@media screen and (max-width: $break-lg) {
+		margin-bottom: 0;
+	}
+
+	&__nav {
+		@include container;
+		height: 100%;
+
+		& ul {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 30px;
+
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			@media screen and (max-width: $break-lg) {
+				grid-gap: 0;
+			}
+			@media screen and (max-width: $break-md) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			@media screen and (max-width: $break-xs) {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 100%;
+
+		text-align: center;
+		text-decoration: none;
+		border-radius: 6px;
+
+		@media screen and (max-width: $break-lg) {
+			border-radius: 0;
+		}
+
+		@include hover-transition;
+
+		& h2 {
+			font-size: 1.7em;
+			color: $white;
+			line-height: 70px;
+			margin-bottom: 0;
+
+			@media screen and (max-width: $break-sm) {
+				font-size: 1.4em;
+			}
+		}
+
+		&--red {
+			background-color: $red;
+		}
+		&--yellow {
+			background-color: $yellow;
+		}
+		&--green {
+			background-color: $green;
+		}
+		&--blue {
+			background-color: $blue;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $dark;
+		}
+	}
+}
+
+/* Different Menu Sections */
+.menu-section {
+	width: 100%;
+
+	&--grey {
+		background-color: $grey;
+
+		&:before {
+			content: "";
+			display: block;
+			height: 60px;
+			margin-top: -60px;
+			background-color: $white;
+		}
+	}
+
+	&--white {
+		background-color: $white;
+
+		&:before {
+			content: "";
+			display: block;
+			height: 60px;
+			margin-top: -60px;
+			background-color: $grey;
+		}
+	}
+
+	&__container {
+		@include container;
+	}
+
+	&__header {
+		font-size: 2.4em;
+		color: $dark;
+		margin-top: 40px;
+		margin-left: 120px;
+		padding-left: 20px;
+		position: relative;
+
+		@media screen and (max-width: $break-sm) {
+			font-size: 2em;
+			margin-left: 30px;
+		}
+		@media screen and (max-width: $break-xs) {
+			font-size: 1.8em;
+			margin-left: 10px;
+		}
+
+		&--red {
+			@include menu-title($red);
+		}
+		&--yellow {
+			@include menu-title($yellow);
+		}
+		&--green {
+			@include menu-title($green);
+		}
+		&--blue {
+			@include menu-title($blue);
+		}
+	}
+}
+
+/* Grid of Menu Items and Pictures in each Menu Section */
+.menu-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
+	margin-bottom: 30px;
+
+	@media screen and (max-width: $break-md) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	@media screen and (max-width: $break-sm) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	& .menu-item {
+		grid-column: span 3;
+		color: $dark;
+
+		@media screen and (max-width: $break-md) {
+			grid-column: 1 / span 4;
+		}
+		@media screen and (max-width: $break-sm) {
+			grid-column: 1;
+		}
+
+		&__header {
+			text-align: center;
+			font-size: 1.8em;
+			margin-bottom: 1.5em;
+
+			@media screen and (max-width: $break-md) {
+				font-size: 1.4em;
+			}
+			@media screen and (max-width: $break-xs) {
+				font-size: 1.2em;
+			}
+		}
+
+		&__desc {
+			margin: 1.5em;
+			font-size: 1em;
+
+			@media screen and (max-width: $break-md) {
+				font-size: 0.9em;
+				margin-bottom: 0.5em;
+			}
+		}
+
+		&__price {
+			margin: 4em 2em;
+			text-align: right;
+			opacity: 0.85;
+
+			@media screen and (max-width: $break-md) {
+				margin: 1em 2em;
+				font-size: 0.9em;
+			}
+		}
+	}
+
+	& .menu-fig {
+		margin: 0;
+		padding: 0;
+		grid-row: span 2;
+
+		&__img {
+			border: 10px darken($grey, 5) solid;
+			@media screen and (max-width: $break-md) {
+				border: none;
+			}
+		}
+
+		&__cap {
+			text-align: center;
+			opacity: 0.7;
+			margin-top: 10px;
+			font-weight: 700;
+		}
+
+		&:nth-of-type(odd) {
+			grid-column: 1 / span 2;
+			@media screen and (max-width: $break-md) {
+				grid-column: 2 / span 2;
+			}
+			@media screen and (max-width: $break-sm) {
+				grid-column: 1;
+			}
+		}
+
+		&:nth-of-type(even) {
+			grid-column: 4 / span 2;
+			@media screen and (max-width: $break-md) {
+				grid-column: 2 / span 2;
+			}
+			@media screen and (max-width: $break-sm) {
+				grid-column: 1;
+			}
+		}
+	}
+}
+
+/* Return to Top of Page Button */
+.top {
+	display: block;
+	position: fixed;
+	bottom: 100px;
+	right: 50px;
+	padding: 8px 16px;
+
+	background-color: $dark;
+	border-radius: 6px;
+	text-decoration: none;
+	transition: background-color 200ms ease-in-out,
+		transform 400ms cubic-bezier(0.61, 1.16, 0.77, 1.15);
+
+	@media screen and (max-width: $break-md) {
+		bottom: 30px;
+		right: 10px;
+		padding: 4px 8px;
+	}
+
+	& i {
+		color: $white;
+		font-size: 2.6em;
+		margin-bottom: 10px;
+
+		@media screen and (max-width: $break-md) {
+			font-size: 1.8em;
+			margin-top: 6px;
+			margin-bottom: 6px;
+		}
+	}
+
+	& p {
+		color: $white;
+		font-size: 1.3em;
+		text-align: center;
+		margin-bottom: 8px;
+
+		@media screen and (max-width: $break-md) {
+			// font-size: 0.7em;
+			display: none;
+		}
+	}
+
+	&:hover,
+	&:active {
+		background-color: $red;
+	}
+
+	&__hidden {
+		transform: translateY(400px);
+	}
+}

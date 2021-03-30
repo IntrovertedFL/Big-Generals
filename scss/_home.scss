@@ -1,0 +1,357 @@
+/*** Home Page ***/
+
+/* Hero - Home Page */
+.hero {
+	@include container;
+	/* Image Credit: Vita Marija Murenaite on Unsplash.com */
+	background-image: url(../images/home-hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 60vh;
+	max-height: 500px;
+	margin: 90px auto 30px;
+	border: 10px solid $grey;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+	@media screen and (max-width: $break-md) {
+		border: none;
+		max-height: none;
+		margin: 0 auto;
+	}
+
+	& .hero__message {
+		color: $white;
+		text-shadow: 2px 2px 8px rgba(black, 0.8);
+		font-size: 4em;
+		text-align: center;
+
+		@media screen and (max-width: $break-md) {
+			font-size: 3.5em;
+			margin: 0 30px;
+		}
+
+		@media screen and (max-width: $break-sm) {
+			font-size: 2.8em;
+		}
+	}
+	& .hero__button {
+		display: inline-block;
+		width: 80%;
+		max-width: 300px;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 2em;
+		text-decoration: none;
+		color: $red;
+		font-weight: 700;
+		background-color: $white;
+		padding: 0.5em 0;
+		border-radius: 6px;
+
+		@media screen and (max-width: $break-md) {
+			font-size: 1.8em;
+		}
+
+		@media screen and (max-width: $break-sm) {
+			font-size: 1.5em;
+			padding: 0.8em 0;
+		}
+
+		@include hover-transition;
+		box-shadow: 0 0 10px 1px rgba($dark, 0.3);
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $red;
+			color: $white;
+		}
+	}
+}
+
+/* Small Buttons Section */
+.small-button-container {
+	@include container;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+
+	@media screen and (max-width: $break-md) {
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+}
+
+.small-button {
+	width: 100%;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: $dark;
+	border-radius: 6px;
+	padding: 0.8em;
+	font-size: 1.8em;
+	@include hover-transition;
+
+	@media screen and (max-width: $break-md) {
+		border-radius: 0;
+		padding: 1.6em;
+		font-size: 1.6em;
+	}
+
+	@media screen and (max-width: $break-sm) {
+		font-size: 1.4em;
+	}
+
+	&:first-child {
+		margin-right: 30px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $dark;
+		color: $white;
+	}
+}
+
+.small-button-green {
+	background-color: $green;
+}
+
+.small-button-yellow {
+	background-color: $yellow;
+}
+
+.img-button-container {
+	@include container;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0;
+
+	@media screen and (max-width: $break-md) {
+		flex-direction: column;
+	}
+}
+
+/* Image Button Section */
+.img-button {
+	width: 100%;
+	display: block;
+	text-align: center;
+
+	margin-right: 30px;
+	@include hover-transition;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	height: 40vh;
+	max-height: 380px;
+	border: 10px solid $grey;
+
+	@media screen and (max-width: $break-lg) {
+		margin-right: 0;
+		border: none;
+	}
+	@media screen and (max-width: $break-md) {
+		max-height: 200px;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&-pizza {
+		/* Image Credit: Peter Bravo de los Rios on Unsplash.com */
+		background-image: url(../images/pizza.jpg);
+		background-position: center;
+	}
+
+	&-wings {
+		/* Image Credit: Sabrina Snyder on https://dinnerthendessert.com/buffalo-wings/ */
+		background-image: url(../images/wings.jpg);
+	}
+
+	&-salad {
+		/* Image Credit: Monika Grabkowska on Unsplash.com */
+		background-image: url(../images/salad.jpg);
+	}
+
+	& .img-button__title {
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($dark, 0.6);
+		opacity: 0;
+		@include hover-transition;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media screen and (max-width: $break-md) {
+			opacity: 1;
+		}
+
+		& h2 {
+			font-size: 2.5em;
+			color: $white;
+			@include hover-transition;
+
+			@media screen and (max-width: $break-md) {
+				font-size: 1.6em;
+			}
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			opacity: 1;
+		}
+	}
+}
+
+/* Circle Header Section for Resos */
+.circle__container {
+	width: 100%;
+	background-color: $white;
+	position: relative;
+	margin-bottom: 130px;
+	height: 230px;
+
+	@media screen and (max-width: $break-md) {
+		margin-bottom: 100px;
+		height: 150px;
+	}
+}
+
+.circle__circle {
+	width: 260px;
+	height: 260px;
+	position: relative;
+	bottom: -100px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+
+	background-color: $red;
+
+	@media screen and (max-width: $break-md) {
+		width: 200px;
+		height: 200px;
+		bottom: -55px;
+	}
+}
+
+.circle__header {
+	text-align: center;
+	color: $white;
+	font-size: 2.3em;
+	line-height: 1.8em;
+	position: relative;
+	top: 20%;
+
+	@media screen and (max-width: $break-md) {
+		top: 25%;
+		font-size: 1.7em;
+	}
+}
+
+/* Reservation Section w/ Form */
+.reso {
+	width: 100%;
+	background-color: $grey;
+	position: relative;
+
+	& .reso__container {
+		@include container;
+		padding: 30px 0;
+	}
+
+	& .reso__form {
+		width: 80%;
+
+		margin: 20px auto 0;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+
+		grid-gap: 30px;
+
+		@media screen and (max-width: $break-md) {
+			grid-gap: 15px;
+		}
+
+		& label {
+			display: block;
+			font-size: 1.2em;
+			margin-bottom: 0.4em;
+			margin-left: 0.5em;
+
+			@media screen and (max-width: $break-md) {
+				font-size: 1em;
+			}
+		}
+
+		& .reso__form-date {
+			margin: 0;
+			padding: 0.5em;
+		}
+		& input,
+		& select {
+			width: 100%;
+			font-size: 1.2em;
+			padding: 0 0.5em;
+			font-family: $font-body;
+			background-color: $dark;
+			border: 4px $grey solid;
+			border-radius: 6px;
+			color: $grey;
+			line-height: 1em;
+			height: 3.2em;
+			transition: border 150ms ease-in-out;
+
+			&:focus {
+				border: 4px rgba($red, 1) solid;
+				outline: none;
+			}
+		}
+
+		& .reso__text-container {
+			width: 100%;
+			grid-column: span 3;
+
+			@media screen and (max-width: $break-md) {
+				grid-column: span 6;
+			}
+		}
+
+		& .reso__third-container {
+			width: 100%;
+			grid-column: span 2;
+
+			@media screen and (max-width: $break-md) {
+				grid-column: span 6;
+			}
+		}
+
+		& .form__submit {
+			grid-column: 2 / span 4;
+			@include hover-transition;
+			margin: 30px 0 50px;
+
+			@media screen and (max-width: $break-md) {
+				grid-column: span 6;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: $red;
+				border: 4px $grey solid;
+			}
+		}
+	}
+}

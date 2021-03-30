@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Big General's Pizza</title>
+  <link rel="stylesheet" href="./css/main.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header__outer-container">
+      <div class="header__inner-container">
+        <a href="index.html" class="header__title-container">
+          <img src="./images/logo.png" alt="Big General's Pizza Logo" />
+        </a>
+        <h2 class="header__phone">604-555-8155</h2>
+      </div>
+      <div class="header__inner-container">
+        <a href="#" class="header__cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="header__hamburger-container">
+          <div class="header__hamburger"></div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Nav -->
+  <nav class="nav--main">
+    <a href="#" class="nav__close-container">
+      <div class="nav__close"></div>
+    </a>
+    <ul class="nav__main">
+      <li><a href="index.html" class="nav__main-link">Home</a></li>
+      <li><a href="menu.html" class="nav__main-link">Our Menu</a></li>
+      <li><a href="location.html" class="nav__main-link">Our Location</a></li>
+    </ul>
+    <ul class="nav__social">
+      <li>
+        <a href="https://www.facebook.com" target="_blank" class="nav__social-link"><i class="fab fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com" target="_blank" class="nav__social-link"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com" target="_blank" class="nav__social-link"><i
+            class="fab fa-instagram"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Confirmation Message -->
+    <section class="conf">
+      <h1 class="conf__header">Thanks!</h1>
+      <h2 class="conf__subheader">
+        We're Looking Forward To Seeing You
+      </h2>
+      <p class="conf__par">
+        We've recieved your request for a reservation. You should recieve an
+        email confirmation in the next 48 hours.
+      </p>
+      <!-- Return To Home -->
+      <a href="index.html" class="conf__back">Go Back</a>
+    </section>
+  </main>
+  <!-- Covers Body when Nav is Open -->
+  <div class="cover-body"></div>
+  <!-- Scripts -->
+  <script src="./scripts/nav.js"></script>
+</body>
+
+</html>

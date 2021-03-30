@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+// Colors
+$white: #ffffff;
+$grey: #efefef;
+$black: #000000;
+
+// https://coolors.co/272932-4d7ea8-89bd9e-f0c987-db4c40
+$red: #db4c40;
+$yellow: #f0c987;
+$green: #89bd9e;
+$blue: #4d7ea8;
+$dark: #272932;
+
+/*** Fonts ***/
+// Roboto - Body
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+// Aleo - Headings
+@import url("https://fonts.googleapis.com/css?family=Aleo:400,700");
+
+$font-body: "Roboto", Helvetica, sans-serif;
+$font-heading: "Aleo", "Bitter", serif;
+
+// Breakpoints
+$break-xs: 340px;
+$break-sm: 576px;
+$break-md: 800px;
+$break-lg: 1120px;
+
+// Mixins
+@mixin hover-transition {
+	transition: background-color 200ms ease-in-out, color 200ms ease-in-out,
+		opacity 200ms ease-in-out;
+}
+
+@mixin container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+@mixin menu-title($color) {
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 15%;
+		height: 2px;
+		background-color: $color;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		height: 2px;
+		background-color: $color;
+	}
+}
